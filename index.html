@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/medias.css">
+    <link rel="stylesheet" href="./css/animations.css">
+    <script defer src="./js/index.js"></script>
+    <title>Club Residence</title>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header__container">
+            <div class="header__phone">
+                <div class="header__phone-img">
+                    <img src="./img/header/phone.svg" alt="phone">
+                </div>
+                <div class="header__phone-number">
+                    <a href="tel:+388007751277">8 (800) 77-512-77</a>
+                    <span  onclick="changeFormStatus()">Заказать звонок</span>
+                </div>
+            </div>
+            <div class="header__lang">
+                <a href="/" class="header__lang-item">ua</a>
+            </div>
+        </div>
+    </header>
+    <!-- Header -->
+    <!-- Form -->
+    <div class="form">
+        <div class="form__inner">
+            <div class="form__container">
+                <form action="#">
+                    <legend>
+                        <pre>
+Заказать
+звонок
+</pre>
+                    </legend>
+                    <label>Имя:*
+                        <input type="text" name="userName" id="userName">
+                    </label>
+                    <label>Телефон:*
+                        <input type="text" name="userPhone"></p>
+                    </label>
+                    <input type="submit" value="Отправить" onclick="changeFormStatus()">
+                </form>
+                <div class="form__cancel-btn" onclick="changeFormStatus()">
+                    <img src="./img/form/cancel-btn.svg" alt="cancel-btn">
+                </div>
+            </div>
+            <div class="form__bg">
+                <img src="./img/form/bg.jpg" alt="bg">
+            </div>
+        </div>
+    </div>
+    <!-- Form -->
+    <!-- Nav -->
+    <nav class="nav">
+        <div class="nav__container">
+            <ol class="nav__indicators">
+                <li class="nav__indicator">
+                    <a href="#block-1"></a>
+                </li>
+                <li class="nav__indicator">
+                    <a href="#block-2"></a>
+                    <span class="nav__active-gray">галерея</span>
+                </li>
+                <li class="nav__indicator">
+                    <a href="#block-3"></a>
+                    <span>планировки</span>
+                </li>
+                <li class="nav__indicator">
+                    <a href="#block-4"></a>
+                    <span>документы</span>
+                </li>
+                <li class="nav__indicator">
+                    <a href="#block-5"></a>
+                    <span class="nav__active-gray">контакты</span>
+                </li>
+            </ol>
+            <button class="nav__control-prev">
+                <img src="./img/nav/control.svg" alt="control-prev">
+            </button>
+            <button class="nav__control-next">
+                <img src="./img/nav/control.svg" alt="control-next">
+            </button>
+        </div>
+    </nav>
+    <!-- Nav -->
+    <main class="content">
+        <!-- 1 -->
+        <section id="block-1">
+            <div class="block-1__inner">
+                <div class="block-1__container">
+                    <div class="block-1__project">Жило комплекс <span class="block-1__project-title"></span></div>
+                    <pre class="block-1__project-text"></pre>
+                    <a class="block-1__project-info-btn" href="#block-2">о комплексе</a>
+                    <div class="block-1__carousel">
+                        <div class="block-1__carousel-indicators">
+                            <button class="block-1__carousel-indicator" onclick="showCurrentProject(0)"></button>
+                            <button class="block-1__carousel-indicator" onclick="showCurrentProject(1)"></button>
+                        </div>
+                        <div class="block-1__carousel-control">
+                            <button class="block-1__carousel-control-prev" onclick="controlProjects(-1)">
+                                <img src="./img/carousel-control.png" alt="carousel-control">
+                            </button>
+                            <button class="block-1__carousel-control-next" onclick="controlProjects(1)">
+                                <img src="./img/carousel-control.png" alt="carousel-control">
+                            </button>
+                        </div>
+                    </div>
+                    <div class="block-1__address">
+                        <div class="block-1__location">
+                            <img src="./img/location.svg" alt="location"> 
+                            <span></span>
+                        </div>
+                        <div class="block-1__subway">
+                            <img src="./img/block-1/subway.svg" alt="subway"> 
+                            <span>лесная</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="block-1__project-number">
+                    <a class="block-1__next-project" href="/">02</a>
+                    <div>
+                        <span></span>
+                    </div>
+                    <a class="block-1__current-project" href="/">01</a>
+                </div>
+                <div class="block-1__project-logo">
+                    <img src="" alt="project-logo-1">
+                </div>
+                <div class="block-1__company-logo">
+                    <img src="./img/block-1/company-logo.svg" alt="company-logo">
+                </div>              
+                <div class="block-1__bg">
+                    <img src="" alt="bg">
+                </div>
+            </div>
+        </section>
+        <!-- 2 -->
+        <section id="block-2">
+            <div class="block-2__inner">
+                <div class="block-2__container">
+                    <div class="block-2__carousel-control-container">
+                        <ul class="block-2__nav">
+                            <li class="block-2__project active" onclick="projectsNav(0)">клубный дом</li>
+                            <li class="block-2__project" onclick="projectsNav(1)">клаб резиденс</li>
+                        </ul>
+                        <div class="block-2__carousel">
+                            <div class="block-2__carousel-indicators">
+                                <button class="block-2__carousel-indicator" onclick="showCurrentPhoto(0)"></button>
+                                <button class="block-2__carousel-indicator" onclick="showCurrentPhoto(1)"></button>
+                                <button class="block-2__carousel-indicator" onclick="showCurrentPhoto(2)"></button>
+                                <button class="block-2__carousel-indicator" onclick="showCurrentPhoto(3)"></button>
+                                <button class="block-2__carousel-indicator" onclick="showCurrentPhoto(4)"></button>
+                            </div>
+                            <div class="block-2__carousel-control">
+                                <button class="block-2__carousel-control-prev" onclick="controlPhotos(-1)">
+                                    <img src="./img/carousel-control.png" alt="carousel-control">
+                                </button>
+                                <button class="block-2__carousel-control-next" onclick="controlPhotos(1)">
+                                    <img src="./img/carousel-control.png" alt="carousel-control">
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="block-2__carousel-items"></div>
+                </div>
+                <div class="block-2__img">
+                    <img src="./img/block-2/img-1-l.jpg" alt="img-1-l">
+                </div>
+                <div class="block-2__bg">
+                    <img src="./img/block-2/bg.png" alt="bg">
+                </div>
+            </div>
+        </section>
+        <!-- 3-4 -->
+        <div class="blocks-3-4">
+            <div class="blocks-3-4__inner">
+                <!-- 3 -->
+                <section id="block-3">
+                    <div class="block-3__inner">
+                        <h2 class="block-3__title">Планировки</h2>
+                        <div class="block-3__container">
+                            <ul class="block-3__nav">
+                                <li class="block-3__apartment active" onclick='apartmentsNav(0)'>1комнатные
+                                    <ul class="block-3__apartment-params">
+                                        <li class="block-3__apartment-param active" onclick='apartmentParamsNav(0)'>36.05м2</li>
+                                        <li class="block-3__apartment-param" onclick='apartmentParamsNav(1)'>37.84м2</li>
+                                        <li class="block-3__apartment-param" onclick='apartmentParamsNav(2)'>40.41м2</li>
+                                        <li class="block-3__apartment-param" onclick='apartmentParamsNav(3)'>41.99м2</li>
+                                        <li class="block-3__apartment-param" onclick='apartmentParamsNav(4)'>43.18м2</li>
+                                        <li class="block-3__apartment-param" onclick='apartmentParamsNav(5)'>44.91м2</li>
+                                    </ul>
+                                </li>
+                                <li class="block-3__apartment" onclick='apartmentsNav(1)'>2комнатные</li>
+                                <li class="block-3__apartment" onclick='apartmentsNav(2)'>3комнатные</li>
+                                <li class="block-3__apartment" onclick='apartmentsNav(3)'>с террасами</li>
+                            </ul>
+                            <div class="block-3__info">
+                                <div class="block-3__info-left">
+                                    <img src="./img/block-3/apartment.png" alt="3__apartment">
+                                    <span onclick="openApartmentImg()">показать планировку</span>
+                                </div>
+                                <div class="block-3__info-right">
+                                    <div class="block-3__apartment-info">
+                                        <table>
+                                            <caption>Квартира 36.05м2</caption>
+                                            <colgroup>
+                                                <col span="2">
+                                                <col class="block-3__table-vr">
+                                            </colgroup>
+                                            <tr>
+                                                <th>Дом</th>
+                                                <td>15</td>
+                                                <td></td>
+                                                <th>Спальня</th>
+                                                <td>14.56м2</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Этаж</th>
+                                                <td>4</td>
+                                                <td></td>
+                                                <th>Кухня</th>
+                                                <td>17.34м2</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Жилая площадь</th>
+                                                <td>36.05м2</td>
+                                                <td></td>
+                                                <th>Предпокой</th>
+                                                <td>14.56м2</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Общая площадь</th>
+                                                <td>36.05м2</td>
+                                                <td></td>
+                                                <th>Санузел</th>
+                                                <td>17.34м2</td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                    <div class="block-3__contacts">
+                                        <div>
+                                            <pre>
+Свяжитесь с нами, 
+чтобы узнать больше
+                                            </pre>
+                                        </div>
+                                        <div>
+                                            Отдел продаж:<br />
+                                            <a href="tel:+380445555775">(044) 555 57 75</a>
+                                        </div>
+                                    </div>
+                                    <div class="block-3__link"  onclick="changeFormStatus()">Зказать звонок</div>
+                                    <div class="block-3__carousel">
+                                        <div class="block-3__carousel-indicators">
+                                            <button class="block-3__carousel-indicator" onclick="showCurrentApartment(0)"></button>
+                                            <button class="block-3__carousel-indicator" onclick="showCurrentApartment(1)"></button>
+                                            <button class="block-3__carousel-indicator" onclick="showCurrentApartment(2)"></button>
+                                            <button class="block-3__carousel-indicator" onclick="showCurrentApartment(3)"></button>
+                                            <button class="block-3__carousel-indicator" onclick="showCurrentApartment(4)"></button>
+                                            <button class="block-3__carousel-indicator" onclick="showCurrentApartment(5)"></button>
+                                        </div>
+                                        <div class="block-3__carousel-control">
+                                            <button class="block-3__carousel-control-prev" onclick="controlApartments(-1)">
+                                                <img src="./img/carousel-control.png" alt="carousel-control">
+                                            </button>
+                                            <button class="block-3__carousel-control-next" onclick="controlApartments(1)">
+                                                <img src="./img/carousel-control.png" alt="carousel-control">
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- 4 -->
+                <section id="block-4">
+                    <div class="block-4__inner">
+                        <div class="block-4__container">
+                            <h2 class="block-4__title">Документы</h2>
+                            <div class="block-4__text">
+                                <p>
+                                    У нас есть все документы на строительство,
+                                    ознакомиться с ними вы можете в этом разделе.
+                                </p>
+                                <p>
+                                    Или подъехать в отделе продаж: Киевская обл. пгт.
+                                    Гостомель, ул. Варшавская и переулок Варшавский
+                                </p>
+                            </div>
+                            <div class="block-4__carousel">
+                                <div class="block-4__carousel-items">
+                                    <div class="block-4__carousel-item-1">
+                                        <div class="block-4__doc-info">
+                                            <div class="block-4__doc">
+                                                <img src="./img/block-4/doc.svg" alt="doc">
+                                                <span class="block-4__doc-size">18 Mb</span>
+                                            </div>
+                                            <h4 class="block-4__doc-title">Разрешение на строительство</h4>
+                                        </div>
+                                        <div class="block-4__doc-footer">
+                                            <div class="block-4__date">21.05.2019</div>
+                                            <img src="./img/block-4/download.svg" alt="download">
+                                        </div>
+                                    </div>
+                                    <div class="block-4__carousel-item-2">
+                                        <div class="block-4__doc-info">
+                                            <div class="block-4__doc">
+                                                <img src="./img/block-4/doc.svg" alt="doc">
+                                                <span class="block-4__doc-size">18 Mb</span>
+                                            </div>
+                                            <h4 class="block-4__doc-title">Разрешение на строительство</h4>
+                                        </div>
+                                        <div class="block-4__doc-footer">
+                                            <div class="block-4__date">21.05.2019</div>
+                                            <img src="./img/block-4/download.svg" alt="download">
+                                        </div>
+                                    </div>
+                                    <div class="block-4__carousel-item-3">
+                                        <div class="block-4__doc-info">
+                                            <div class="block-4__doc">
+                                                <img src="./img/block-4/doc.svg" alt="doc">
+                                                <span class="block-4__doc-size">18 Mb</span>
+                                            </div>
+                                            <h4 class="block-4__doc-title">Разрешение на строительство</h4>
+                                        </div>
+                                        <div class="block-4__doc-footer">
+                                            <div class="block-4__date">21.05.2019</div>
+                                            <img src="./img/block-4/download.svg" alt="download">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="block-4__carousel-control-container">
+                                    <div class="block-4__carousel-indicators">
+                                        <button class="block-4__carousel-indicator" onclick="showCurrentDocs(0)"></button>
+                                        <button class="block-4__carousel-indicator" onclick="showCurrentDocs(1)"></button>
+                                        <button class="block-4__carousel-indicator" onclick="showCurrentDocs(2)"></button>
+                                    </div>
+                                    <div class="block-4__carousel-control">
+                                        <button class="block-4__carousel-control-prev" onclick="controlDocs(-1)">
+                                            <img src="./img/carousel-control.png" alt="carousel-control">
+                                        </button>
+                                        <button class="block-4__carousel-control-next" onclick="controlDocs(1)">
+                                            <img src="./img/carousel-control.png" alt="carousel-control">
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="block-4__bg"></div>
+                    </div>
+                </section>
+                <div class="blocks-3-4__bg">
+                    <img src="./img/blocks-3-4/bg.png" alt="bg">
+                </div>
+            </div>
+        </div>
+        <!-- 5 -->
+        <section id="block-5">
+            <div class="block-5__inner">
+                <div class="block-5__container">
+                    <div class="block-5__title">
+                        <h2>Офис<br /> продаж</h2>
+                        <span class="block-5__link-container">
+                            <img src="./img/block-5/email.svg" alt="email">
+                            <span class="block-5__link">Написать нам</span>
+                        </span>
+                        <div class="block-5__burger-menu">Контакты</div>
+                    </div>
+                    <div class="block-5__contacts">
+                        <div class="block-5__address">
+                            <h5>Адрес</h5>
+                            <div class="block-5__info">Киев, переулок Радистов, 16</div>
+                            <span class="block-5__link">Открыть в навигаторе</span>
+                        </div>
+                        <div class="block-5__phone">
+                            <h5>Телефон</h5>
+                            <div class="block-5__info">
+                                <a href="tel:+380445555625">(044) 555 57 75</a>
+                                <span>пн-пт: 9:00 - 18:00</span>
+                            </div>
+                            <span class="block-5__link"  onclick="changeFormStatus()">Заказать звонок</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="block-5__map">
+                    <img src="./img/block-5/map.jpg" alt="map">
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer__container">
+            <div class="footer__logo-1">
+                <img src="./img/footer/logo-1.svg" alt="logo-1">
+            </div>
+            <div class="footer__address">
+                <img src="./img/location.svg" alt="location"> 
+                <span>Киев, переулок Радистов, 14 А</span>
+            </div>
+            <div class="footer__phone">
+                <img src="./img/footer/phone.svg" alt="phone">
+                Отдел продаж: <a href="tel:+380445555625">(044) 555 56 25</a>
+            </div>
+            <div class="footer__soc">
+                <img src="./img/footer/facebook.svg" alt="facebook">
+                <img src="./img/footer/instagram.svg" alt="instagram">
+            </div>
+            <div class="footer__lang">
+                <span class="active">ua</span>
+                <span>ru</span>
+            </div>
+            <div class="footer__logo-2">
+                <img src="./img/footer/logo-2.svg" alt="logo-2">
+            </div>
+        </div>
+    </footer>
+    <!-- Footer -->
+</body>
+</html>

@@ -1,0 +1,11 @@
+@keyframes navActive {
+  0% {
+    background: radial-gradient(#A68E52 1.5px, rgba(221, 221, 221, 0.5) 1.5px, rgba(221, 221, 221, 0.5) 5px, #A68E52 5px, #A68E52 5.5px, rgba(221, 221, 221, 0.3) 5.5px, rgba(221, 221, 221, 0.3) 7.5px, #A68E52 7.5px);
+  }
+  100% {
+    background: radial-gradient(#A68E52 3px, rgba(221, 221, 221, 0.5) 3px, rgba(221, 221, 221, 0.5) 10px, #A68E52 10px, #A68E52 10.5px, rgba(221, 221, 221, 0.3) 10.5px, rgba(221, 221, 221, 0.3) 14.5px, #A68E52 14.5px);
+  }
+}
+.nav .active a {
+  animation: navActive 1.5s linear;
+}
